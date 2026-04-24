@@ -5,6 +5,7 @@
 export const up = function(knex) {
   return knex.schema.createTable("merchants", (table) => {
     table.uuid("id").primary();
+    table.string("name").notNullable();
     table.string("email").notNullable().unique();
     table.string("password").notNullable();
     table.timestamps(true, true);
