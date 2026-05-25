@@ -30,7 +30,7 @@ export const loginMerchant = async (req: Request, res: Response) => {
             process.env.JWT_SECRET as string,
             { expiresIn: "1d" }
         );
-        return res.json({ token });
+         return res.json({ token });
     }
     res.status(401).json({ message: "Invalid credentials" });
 };
